@@ -1,0 +1,24 @@
+
+#app {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.content {
+  display: flex;
+  width:auto;
+  flex-direction: column;
+}
+
+.resultgroup {
+  display: flex;
+  flex-direction: row;
+  align-items: space-between;
+}
+
+body {
+  background-color: lightblue;
+}

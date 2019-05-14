@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="../src/css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script type="text/javascript" src="../src/js/index.js"></script>
+    <title>Projet IA - twitter search</title>
+  </head>
+    <body>
+
+        <div id="app">
+            <div class="content">
+
+                <h2 id="title">        
+                    Twitter Search
+                </h2>
+
+                <hr>
+                
+                <div>
+                    Poser une question
+                </div>
+                <input type="text" id="question" v-model="question"/>
+                <button id="button" v-on:click="sendQuestion">
+                    Soumettre 
+                </button>
+                <div id="result" v-for="res in posts">
+                    <div class="resultgroup">
+                    <div class="text">
+                        {{res}}
+                    </div>
+                    <div class="sentiment">
+
+                    </div>
+                    <div class="feedback">
+                        <button class="search_accuracy">
+
+                        </button>
+                        <button class="sentiment_accuracy">
+                        
+                        </button>
+                    </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
