@@ -5,7 +5,7 @@
     <link rel="stylesheet" type="text/css" href="../src/css/style.css">
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     <script type="text/javascript" src="../src/js/index.js"></script>
-    <title>Projet IA - twitter search</title>
+    <title>Projet IA - twitter sentiment search</title>
   </head>
     <body>
 
@@ -13,13 +13,13 @@
             <div class="content">
 
                 <h2 id="title">        
-                    Twitter Search
+                    Analyse Sentimental sur twitter
                 </h2>
 
                 <hr>
                 
                 <div>
-                    Poser une question
+                    Entrer une marque, un nom, une concepte... (max 4 mots)
                 </div>
                 <input type="text" id="question" v-model="question"/>
                 <button id="button" v-on:click="sendQuestion">
@@ -28,23 +28,28 @@
                 <div id="result" v-for="res in posts">
                     <div class="resultgroup">
                     <div class="text">
-                        {{res}}
+                        {{res.text}}
                     </div>
-                    <div class="sentiment">
-
+                    <div> | </div>
+                    <div class="sentimtent">
+                        {{res.sentiment}}
                     </div>
-                    <div class="feedback">
+                    <!--<div class="feedback">
                         <button class="search_accuracy">
 
                         </button>
                         <button class="sentiment_accuracy">
                         
                         </button>
-                    </div>
+                    </div>-->
 
                     </div>
                 </div>
             </div>
+
         </div>
+        <footer>
+            <div>Projet réalisé par B Scholl, O Talibi, L Austin
+        </footer>
     </body>
 </html>

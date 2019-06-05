@@ -9,7 +9,7 @@
 
 .content {
   display: flex;
-  width:auto;
+  width:95%;
   flex-direction: column;
 }
 
@@ -21,4 +21,8 @@
 
 body {
   background-color: lightblue;
+}
+
+div {
+    padding: 2px;
 }
