@@ -3,8 +3,9 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  /*justify-content: center;*/
   height: 100%;
+  flex: 1;
 }
 
 .content {
@@ -16,13 +17,28 @@
 .resultgroup {
   display: flex;
   flex-direction: row;
-  align-items: space-between;
+  justify-content: space-between;
 }
+
+#result:nth-child(even) {background: #CCC}
+#result:nth-child(odd) {background: #FFF}
 
 body {
   background-color: lightblue;
+  display: flex;
+  flex-direction: column;
+  min-height:100vh
 }
 
 div {
     padding: 2px;
+}
+
+.sentiment {
+  padding-left:6px;
+  /*align-self:flex-end;*/
+}
+
+.space-below {
+  margin-bottom:9px;
 }

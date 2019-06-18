@@ -13,16 +13,16 @@
             <div class="content">
 
                 <h2 id="title">        
-                    Analyse Sentimental sur twitter
+                    Recherche d'Information et Analyse Sentimental sur Twitter
                 </h2>
 
                 <hr>
                 
-                <div>
+                <div class="space-below">
                     Entrer une marque, un nom, une concept
                 </div>
                 <input type="text" id="question" v-model="question"/>
-                <button id="button" v-on:click="sendQuestion">
+                <button class="space-below" id="button" v-on:click="sendQuestion">
                     Soumettre 
                 </button>
                 <div id="result" v-for="res in posts">
@@ -30,8 +30,8 @@
                     <div class="text">
                         {{res.text}}
                     </div>
-                    <div> | </div>
-                    <div class="sentimtent">
+                    
+                    <div class="sentiment">
                         {{res.sentiment}}
                     </div>
                     <!--<div class="feedback">
@@ -49,7 +49,8 @@
 
         </div>
         <footer>
-            <div>Projet réalisé par B Scholl, O Talibi, L Austin
+            <div>Projet réalisé par B Scholl, O Talibi, L Austin</div>
         </footer>
     </body>
+   
 </html>
